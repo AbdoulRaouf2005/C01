@@ -1,5 +1,9 @@
 #!/bin/bash
-read -p "Entrée le nom du dossier : " dossier 
-compteur=$(ls -1|wc -l)
-echo $compteur
-exit 0
+read dossier
+if [ -d "../$dossier" ]; then
+      compteur=$(ls -1|wc -l)
+      echo "Le dossier $dossier contient $compteur fichier(s)."
+      exit 0
+else
+      exit 1
+fi
