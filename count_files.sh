@@ -1,5 +1,10 @@
 #!/bin/bash
 read dossier
-nb=$(ls "$dossier" | wc -l)
-echo "Le dossier $dossier contient $nb fichier(s).
+
+#Compteur des fichiers d'un dossier
+count=$(ls "$dossier" | wc -l)
+
+#affichage du resultat
+echo "Le dossier $dossier contient $count fichier(s)."
+
 exit 0
